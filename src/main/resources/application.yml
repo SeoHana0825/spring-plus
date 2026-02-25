@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3307/nbcam
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+jwt:
+  secret:
+    key: 7Iqk7YyA66as67KV64uY64uk7J207Yq466as7J2064pU64u567m866as6rWQ7J206re466as64uk
