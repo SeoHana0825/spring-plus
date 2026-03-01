@@ -5,8 +5,10 @@ import org.example.expert.client.WeatherClient;
 import org.example.expert.domain.common.dto.AuthUser;
 import org.example.expert.domain.common.exception.InvalidRequestException;
 import org.example.expert.domain.todo.dto.request.TodoSaveRequest;
+import org.example.expert.domain.todo.dto.request.TodoSearchRequest;
 import org.example.expert.domain.todo.dto.response.TodoResponse;
 import org.example.expert.domain.todo.dto.response.TodoSaveResponse;
+import org.example.expert.domain.todo.dto.response.TodoSearchResponse;
 import org.example.expert.domain.todo.entity.Todo;
 import org.example.expert.domain.todo.repository.TodoRepository;
 import org.example.expert.domain.user.dto.response.UserResponse;
@@ -91,4 +93,17 @@ public class TodoService {
                 todo.getModifiedAt()
         );
     }
+
+    public Page<TodoSearchResponse> search (TodoSearchRequest request, Pageable pageable) {
+        searchDate (request.getStartDate(),request.getEndDate());
+
+        return todoRepository.search(request, pageable);
+    }
+
+    private void searchDate (LocalDateTime startDate, LocalDateTime endDate) {
+        if(startDate != null && endDate != null && startDate.isAfter(endDate)) {
+            throw new IllegalArgumentException("시작일은 종료일보다 빠를 수 없습니다.");
+        }
+    }
+
 }

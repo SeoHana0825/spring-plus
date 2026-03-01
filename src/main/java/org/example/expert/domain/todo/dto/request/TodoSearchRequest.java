@@ -5,15 +5,16 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TodoSaveRequest {
+public class TodoSearchRequest {
 
     @NotBlank
     private String title;
-    @NotBlank
     private String nickname;
-    @NotBlank
-    private String contents;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
 }
