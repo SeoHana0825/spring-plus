@@ -1,13 +1,13 @@
 # CH5 SPRING PLUS
-#### 코드 개선 및 N+1 문제, Security, QueryDSL, 배포까지의 흐름 이해 과제
+#### 코드 개선 및 N+1 문제, Security, QueryDSL 활용, 배포까지의 흐름 이해 과제
 
 ---
-### 1. 과제 목표
+## 1. 과제 목표
 
 ---
-### 2. 과제 내용
+## 2. 과제 내용
 
-#### Lv1. 코드 개선
+### Lv1. 코드 개선
 
 - ```@Transactional```의 이해
   - 할 일 저장 기능 (POST) api 호출 에러 발생
@@ -33,9 +33,9 @@
   - ```UserAdminController``` 클래스의 ```changeUserRols()``` 메소드가 **실행 전** 동작 필요
   - ```AdminAccessLoggingAspect``` 클래스에 있는 AOP를 개발 의도에 맞게 수정
 
-- 트러블슈팅 : https://velog.io/@onnuri1226/트러블슈팅-Spring플러스-Lv1-필수-코드-개선
+#### 트러블슈팅 : https://velog.io/@onnuri1226/트러블슈팅-Spring플러스-Lv1-필수-코드-개선
 
-#### Lv2. Security, QueryDLS 이해하기
+### Lv2. Security, QueryDLS 이해하기
 
 - ```JPA Cascade``` 활용
   - 실수로 코드를 지웠다!
@@ -54,7 +54,21 @@
     - 접근 권한, 유저 권한 기능은 유지
     - 토큰 기반 인증 방식 유지 (JWT 유지)
 
-- 트러블슈팅 : https://velog.io/@onnuri1226/트러블슈팅-Spring플러스-Lv2-필수.-Security-QueryDSL
+#### 트러블슈팅 : https://velog.io/@onnuri1226/트러블슈팅-Spring플러스-Lv2-필수.-Security-QueryDSL
 
-#### Lv3. QueryDLS 검색기능구현, Transaction 심화, AWS, 대용량 데이터 처리
+### Lv3. QueryDLS 검색기능구현, Transaction 심화, AWS, 대용량 데이터 처리
 
+- ```QueryDSL``` 활용한 검색기능 구현
+  - 일정 검색 기능 구현 추가
+  - 일정의 제목, 범위(생성일), 닉네임으로 검색 가능
+    - 제목 및 닉네임은 부분적으로 일치해도 검색 가능
+    - 생성일 범위는 **최신일** 순으로 정렬
+  - 반환 시 **제목, 담당자 수, 총 댓글 수**만 반환
+    - 페이징 처리
+- ```@Transactional``` 심화
+  - 매니저 등록 시 log 추가
+    - 등록, 로깅은 독립적 처리
+    - 매니저 등록은 실패할 수 있지만, 로그는 반드시 저장되어야 한다.
+    - 로그 생성 기간 필수
+
+#### 트러블슈팅 : 
