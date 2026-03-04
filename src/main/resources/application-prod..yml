@@ -1,0 +1,39 @@
+spring:
+  config:
+    import: "aws-parameterstore:/camp-health-app/prod/"
+  cloud:
+    aws:
+      region:
+        static: ap-northeast-2
+      credentials:
+        instance-profile: false
+
+  datasource:
+    url: jdbc:mysql://{RDS엔드포인트}:3306/plus-database
+    username: admin
+    password: 12345678
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    message: ${APP_MESSAGE}
+
+logging:
+  level:
+    root: INFO
