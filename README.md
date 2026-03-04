@@ -2,10 +2,7 @@
 #### 코드 개선 및 N+1 문제, Security, QueryDSL 활용, 배포까지의 흐름 이해 과제
 
 ---
-## 1. 과제 목표
-
----
-## 2. 과제 내용
+## 과제 내용
 
 ### Lv1. 코드 개선
 
@@ -72,12 +69,13 @@
     - 로그 생성 기간 필수
 - AWS 활용
   - 1. EC2 배포
-    - ![스크린샷 2026-03-04 오전 11.29.15.png](../Desktop/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-03-04%20%EC%98%A4%EC%A0%84%2011.29.15.png)
-    - ![스크린샷 2026-03-04 오전 11.29.01.png](../Desktop/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-03-04%20%EC%98%A4%EC%A0%84%2011.29.01.png)
-    - ![스크린샷 2026-03-03 오후 12.33.45.png](../Desktop/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-03-03%20%EC%98%A4%ED%9B%84%2012.33.45.png)
+    - <img width="1388" height="593" alt="스크린샷 2026-03-04 오전 11 29 54" src="https://github.com/user-attachments/assets/12ddb0e4-b278-4d9e-9274-e8bf45b7992a" />
+    - <img width="865" height="477" alt="스크린샷 2026-03-04 오전 11 36 38" src="https://github.com/user-attachments/assets/b9a4b5c7-5a83-4aeb-9661-3ab33faa5941" />
+
   - 2. RDS 구축
-    - ![스크린샷 2026-03-04 오후 12.13.13.png](../Desktop/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-03-04%20%EC%98%A4%ED%9B%84%2012.13.13.png)
-    - ![스크린샷 2026-03-04 오후 12.13.52.png](../Desktop/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-03-04%20%EC%98%A4%ED%9B%84%2012.13.52.png)
+    - <img width="1254" height="585" alt="스크린샷 2026-03-04 오후 12 13 13" src="https://github.com/user-attachments/assets/f77bb215-1d37-4572-b2d0-d76b519fa386" />
+
   - 3. S3 버킷 생성
-    - ![스크린샷 2026-03-04 오후 12.10.13.png](../Desktop/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-03-04%20%EC%98%A4%ED%9B%84%2012.10.13.png)
+    - <img width="1172" height="603" alt="스크린샷 2026-03-04 오후 12 13 52" src="https://github.com/user-attachments/assets/93323257-a79c-4386-a7b9-f51e88a5144b" />
+
 #### 트러블슈팅 : https://velog.io/@onnuri1226/트러블슈팅-Spring플러스-Lv3-도전
